@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:showIn="@layout/activity_my">
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="474dp">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="4"
+            android:id="@+id/button4"
+            android:layout_row="1"
+            android:layout_column="0"
+            android:onClick="sendMessage" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="5"
+            android:id="@+id/button5"
+            android:layout_row="1"
+            android:layout_column="1"
+            android:onClick="sendMessage" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="6"
+            android:id="@+id/button6"
+            android:layout_row="1"
+            android:layout_column="2"
+            android:onClick="sendMessage" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="7"
+            android:id="@+id/button7"
+            android:layout_row="2"
+            android:layout_column="0"
+            android:onClick="sendMessage" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="8"
+            android:id="@+id/button8"
+            android:layout_row="2"
+            android:layout_column="1"
+            android:onClick="sendMessage" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="9"
+            android:id="@+id/button9"
+            android:layout_row="2"
+            android:layout_column="2"
+            android:onClick="sendMessage" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:id="@+id/button0"
+            android:layout_row="3"
+            android:layout_column="1"
+            android:onClick="sendMessage" />
+
+        <TextView
+            android:layout_width="40dp"
+            android:layout_height="30dp"
+            android:id="@+id/textView"
+            android:text="4231,1578,9926,4007,5861,1330,3047,6422,1562,1572"
+            android:layout_row="4"
+            android:layout_column="1"/>
+        <TextView
+            android:id="@+id/display"
+            android:layout_width="45dp"
+            android:layout_height="30dp"
+            android:layout_row="1"
+            android:layout_column="4"
+            android:ellipsize="marquee"
+            android:fadingEdge="horizontal"
+            android:singleLine="true"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#FF999999"
+            android:textIsSelectable="false"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1"
+            android:id="@+id/button1"
+            android:layout_row="0"
+            android:layout_column="0"
+            android:onClick="sendMessage" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2"
+            android:id="@+id/button2"
+            android:layout_row="0"
+            android:layout_column="1"
+            android:onClick="sendMessage" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="3"
+            android:id="@+id/button3"
+            android:layout_row="0"
+            android:layout_column="2"
+            android:onClick="sendMessage" />
+    </GridLayout>
+    <TextView
+        android:id="@+id/edit_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>
