@@ -1,0 +1,250 @@
+[
+    {
+        "outputFile": "/Users/Yiqing/Desktop/GestureLock-master1/app/build/intermediates/res/merged/debug/values/values.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 3,
+                    "startColumn": 4,
+                    "startOffset": 159,
+                    "endColumn": 57,
+                    "endOffset": 212
+                },
+                "from": {
+                    "file": "/Users/Yiqing/Desktop/GestureLock-master1/app/src/main/res/values/dimens.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 4,
+                    "startColumn": 4,
+                    "startOffset": 217,
+                    "endColumn": 55,
+                    "endOffset": 268
+                },
+                "from": {
+                    "file": "/Users/Yiqing/Desktop/GestureLock-master1/app/src/main/res/values/dimens.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 5,
+                    "startColumn": 4,
+                    "startOffset": 273,
+                    "endColumn": 52,
+                    "endOffset": 321
+                },
+                "from": {
+                    "file": "/Users/Yiqing/Desktop/GestureLock-master1/app/src/main/res/values/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 6,
+                    "startColumn": 4,
+                    "startOffset": 326,
+                    "endColumn": 51,
+                    "endOffset": 373
+                },
+                "from": {
+                    "file": "/Users/Yiqing/Desktop/GestureLock-master1/app/src/main/res/values/strings.xml",
+                    "position": {
+                        "startLine": 3,
+                        "startColumn": 4,
+                        "startOffset": 56,
+                        "endColumn": 51,
+                        "endOffset": 103
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 7,
+                    "startColumn": 4,
+                    "startOffset": 378,
+                    "endColumn": 41,
+                    "endOffset": 415
+                },
+                "from": {
+                    "file": "/Users/Yiqing/Desktop/GestureLock-master1/app/src/main/res/values/strings.xml",
+                    "position": {
+                        "startLine": 5,
+                        "startColumn": 4,
+                        "startOffset": 161,
+                        "endColumn": 41,
+                        "endOffset": 198
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 8,
+                    "startColumn": 4,
+                    "startOffset": 420,
+                    "endColumn": 43,
+                    "endOffset": 459
+                },
+                "from": {
+                    "file": "/Users/Yiqing/Desktop/GestureLock-master1/app/src/main/res/values/strings.xml",
+                    "position": {
+                        "startLine": 8,
+                        "startColumn": 4,
+                        "startOffset": 289,
+                        "endColumn": 43,
+                        "endOffset": 328
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 9,
+                    "startColumn": 4,
+                    "startOffset": 464,
+                    "endColumn": 41,
+                    "endOffset": 501
+                },
+                "from": {
+                    "file": "/Users/Yiqing/Desktop/GestureLock-master1/app/src/main/res/values/strings.xml",
+                    "position": {
+                        "startLine": 7,
+                        "startColumn": 4,
+                        "startOffset": 247,
+                        "endColumn": 41,
+                        "endOffset": 284
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 10,
+                    "startColumn": 4,
+                    "startOffset": 506,
+                    "endColumn": 62,
+                    "endOffset": 564
+                },
+                "from": {
+                    "file": "/Users/Yiqing/Desktop/GestureLock-master1/app/src/main/res/values/strings.xml",
+                    "position": {
+                        "startLine": 11,
+                        "startColumn": 6,
+                        "startOffset": 458,
+                        "endColumn": 65,
+                        "endOffset": 517
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 11,
+                    "startColumn": 4,
+                    "startOffset": 569,
+                    "endColumn": 115,
+                    "endOffset": 680
+                },
+                "from": {
+                    "file": "/Users/Yiqing/Desktop/GestureLock-master1/app/src/main/res/values/strings.xml",
+                    "position": {
+                        "startLine": 10,
+                        "startColumn": 5,
+                        "startOffset": 339,
+                        "endColumn": 117,
+                        "endOffset": 451
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 12,
+                    "startColumn": 4,
+                    "startOffset": 685,
+                    "endColumn": 75,
+                    "endOffset": 756
+                },
+                "from": {
+                    "file": "/Users/Yiqing/Desktop/GestureLock-master1/app/src/main/res/values/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 13,
+                    "startColumn": 4,
+                    "startOffset": 761,
+                    "endColumn": 77,
+                    "endOffset": 834
+                },
+                "from": {
+                    "file": "/Users/Yiqing/Desktop/GestureLock-master1/app/src/main/res/values/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 14,
+                    "startColumn": 4,
+                    "startOffset": 839,
+                    "endColumn": 80,
+                    "endOffset": 915
+                },
+                "from": {
+                    "file": "/Users/Yiqing/Desktop/GestureLock-master1/app/src/main/res/values/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 15,
+                    "startColumn": 4,
+                    "startOffset": 920,
+                    "endColumn": 75,
+                    "endOffset": 991
+                },
+                "from": {
+                    "file": "/Users/Yiqing/Desktop/GestureLock-master1/app/src/main/res/values/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 16,
+                    "startColumn": 4,
+                    "startOffset": 996,
+                    "endColumn": 43,
+                    "endOffset": 1035
+                },
+                "from": {
+                    "file": "/Users/Yiqing/Desktop/GestureLock-master1/app/src/main/res/values/strings.xml",
+                    "position": {
+                        "startLine": 6,
+                        "startColumn": 4,
+                        "startOffset": 203,
+                        "endColumn": 43,
+                        "endOffset": 242
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 17,
+                    "startColumn": 4,
+                    "startOffset": 1040,
+                    "endLine": 23,
+                    "endColumn": 12,
+                    "endOffset": 1325
+                },
+                "from": {
+                    "file": "/Users/Yiqing/Desktop/GestureLock-master1/app/src/main/res/values/styles.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 24,
+                    "startColumn": 4,
+                    "startOffset": 1330,
+                    "endLine": 26,
+                    "endColumn": 12,
+                    "endOffset": 1485
+                },
+                "from": {
+                    "file": "/Users/Yiqing/Desktop/GestureLock-master1/app/src/main/res/values/styles.xml"
+                }
+            }
+        ]
+    }
+]
