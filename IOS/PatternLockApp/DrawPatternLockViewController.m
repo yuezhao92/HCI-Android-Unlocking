@@ -10,6 +10,7 @@
 #import "DrawPatternLockView.h"
 extern NSDate *methodStart;
 extern NSDate *methodFinish;
+extern int counter;
 
 #define MATRIX_SIZE 3
 //#define TICK   NSDate *startTime = [NSDate date]
@@ -153,6 +154,26 @@ extern NSDate *methodFinish;
     NSTimeInterval executionTime = [methodFinish timeIntervalSinceDate:methodStart];
     NSLog(@"executionTime = %f", executionTime);
     
+    //打算save的string，也就是execution time
+    NSString *stringToWrite = [NSString stringWithFormat: @"%i attempt executionTime = %f \n", counter,executionTime];
+    //真正的手机上该用的地址
+    //NSString *filePath = [[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) firstObject] stringByAppendingPathComponent:@"File.txt"];
+    NSString *filePath = @"/Users/zhaoy9/Downloads/Android-Pattern-Lock-on-iOS-master/PatternLockApp/File.txt";// hardcoded
+    NSFileHandle *fileHandle = [NSFileHandle fileHandleForWritingAtPath:filePath];
+    if (fileHandle){
+        [fileHandle seekToEndOfFile];
+        [fileHandle writeData:[stringToWrite dataUsingEncoding:NSUTF8StringEncoding]];
+        [fileHandle closeFile];
+    }
+    else{
+        [stringToWrite writeToFile:filePath
+                  atomically:NO
+                    encoding:NSStringEncodingConversionAllowLossy
+                       error:nil];
+    }
+    
+    NSLog(@"file path = %@", filePath);
+    //[stringToWrite writeToFile:filePath atomically:NO encoding:NSUTF8StringEncoding error:&error];
   return key;
 }
 

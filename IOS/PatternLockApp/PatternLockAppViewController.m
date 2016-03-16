@@ -64,7 +64,7 @@ extern NSArray *myArray;
 
 - (void)lockEntered:(NSString*)key
 {
-  myArray = @[@"0102030609", @"0102030507"];
+  myArray = @[@"0102030609", @"0102030507",@"0102030507"];
   NSLog(@"key: %@", key);
 
   if (![key isEqualToString:myArray[counter]]) {
@@ -90,11 +90,7 @@ extern NSArray *myArray;
 
 - (IBAction)lockClicked:(id)sender {
   DrawPatternLockViewController *lockVC = [[DrawPatternLockViewController alloc] init];
-     //NSDate *methodStart = [NSDate date];
   [lockVC setTarget:self withAction:@selector(lockEntered:)];
-    //NSDate *methodFinish = [NSDate date];
-    //NSTimeInterval executionTime = [methodFinish timeIntervalSinceDate:methodStart];
-    //NSLog(@"executionTime = %f", executionTime);
   [self presentModalViewController:lockVC animated:YES];
 }
 

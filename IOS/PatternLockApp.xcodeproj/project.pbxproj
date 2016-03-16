@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4355099E1C99A29100FFABAE /* File.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4355099D1C99A29100FFABAE /* File.txt */; };
 		F84FF4541464913400E62672 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F84FF4531464913400E62672 /* UIKit.framework */; };
 		F84FF4561464913400E62672 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F84FF4551464913400E62672 /* Foundation.framework */; };
 		F84FF4581464913400E62672 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F84FF4571464913400E62672 /* CoreGraphics.framework */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4355099D1C99A29100FFABAE /* File.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = File.txt; sourceTree = "<group>"; };
 		F84FF44F1464913400E62672 /* PatternLockApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PatternLockApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F84FF4531464913400E62672 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		F84FF4551464913400E62672 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -110,6 +112,7 @@
 				F84FF45C1464913500E62672 /* InfoPlist.strings */,
 				F84FF45F1464913500E62672 /* main.m */,
 				F84FF4611464913500E62672 /* PatternLockApp-Prefix.pch */,
+				4355099D1C99A29100FFABAE /* File.txt */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -164,6 +167,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4355099E1C99A29100FFABAE /* File.txt in Resources */,
 				F84FF45E1464913500E62672 /* InfoPlist.strings in Resources */,
 				F84FF46A1464913500E62672 /* PatternLockAppViewController.xib in Resources */,
 				F84FF4781464935800E62672 /* dot_off.png in Resources */,
@@ -294,6 +298,7 @@
 				F84FF46F1464913500E62672 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
