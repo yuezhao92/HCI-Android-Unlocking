@@ -38,26 +38,43 @@ extern NSDate *methodFinish;
   [super viewDidLoad];
   
   self.view.backgroundColor = [UIColor darkGrayColor];
-
-  for (int i=0; i<2; i++)
-  {
-    for (int j=0; j<3; j++)
-    {
-      UIImage *dotImage = [UIImage imageNamed:@"dot_off.png"];
-      UIImageView *imageView = [[UIImageView alloc] initWithImage:dotImage
-                                                 highlightedImage:[UIImage imageNamed:@"dot_on.png"]];
-      imageView.frame = CGRectMake(0, 0, dotImage.size.width/2, dotImage.size.height/2);
-      imageView.userInteractionEnabled = YES;
-      imageView.tag = j + i*3 + 1;
-      [self.view addSubview:imageView];
+    
+    for(int i=0;i<6;i++){
+        UIImage *dotImage = [UIImage imageNamed:@"dot_off.png"];
+        UIImageView *imageView = [[UIImageView alloc] initWithImage:dotImage
+                                                   highlightedImage:[UIImage imageNamed:@"dot_on.png"]];
+        imageView.frame = CGRectMake(0, 0, dotImage.size.width/2, dotImage.size.height/2);
+        imageView.userInteractionEnabled = YES;
+        imageView.tag = i+1;
+        [self.view addSubview:imageView];
     }
-  }
+    
+
+//  for (int i=0; i<2; i++)
+//  {
+//    for (int j=0; j<3; j++)
+//    {
+//      UIImage *dotImage = [UIImage imageNamed:@"dot_off.png"];
+//      UIImageView *imageView = [[UIImageView alloc] initWithImage:dotImage
+//                                                 highlightedImage:[UIImage imageNamed:@"dot_on.png"]];
+//      imageView.frame = CGRectMake(0, 0, dotImage.size.width/2, dotImage.size.height/2);
+//      imageView.userInteractionEnabled = YES;
+//      imageView.tag = j + i*3 + 1;
+//      [self.view addSubview:imageView];
+//    }
+//  }
 }
 
 
 - (void)viewWillLayoutSubviews {
 //  int w = 100/MATRIX_SIZE;
 //  int h = 100/MATRIX_SIZE;
+    int x=80;//move right
+    int y=200;//move down
+    int diameter = 150;
+    int radius = diameter / 2;
+    int longSide = 1.73205/2*radius;
+    int shortSide = radius/2;
 
   int i=0;
   for (UIView *view in self.view.subviews)
@@ -67,27 +84,27 @@ extern NSDate *methodFinish;
 //      int x = w*(i/MATRIX_SIZE) + w/2;
 //      int y = h*(i%MATRIX_SIZE) + h/2;
         if(i==0){
-            view.center = CGPointMake(160, 160);
+            view.center = CGPointMake(shortSide+x, 0+y);
             i++;
         }
         else if(i==1){
-            view.center = CGPointMake(160-78, 160+78);
+            view.center = CGPointMake(radius+shortSide+x, 0+y);
             i++;
         }
         else if(i==2){
-            view.center = CGPointMake(160+78, 160+78);
+            view.center = CGPointMake(0+x, longSide+y);
             i++;
         }
         else if(i==3){
-            view.center = CGPointMake(160-78, 160+78*2);
+            view.center = CGPointMake(diameter+x, longSide+y);
             i++;
         }
         else if(i==4){
-            view.center = CGPointMake(160+78, 160+78*2);
+            view.center = CGPointMake(shortSide+x, 2*longSide+y);
             i++;
         }
         else if(i==5){
-            view.center = CGPointMake(160, 160+78*3);
+            view.center = CGPointMake(radius+shortSide+x, 2*longSide+y);
             i++;
         }
         else
