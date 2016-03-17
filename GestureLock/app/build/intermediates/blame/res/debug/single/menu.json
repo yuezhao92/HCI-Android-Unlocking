@@ -2,5 +2,9 @@
     {
         "merged": "/Users/Yiqing/Desktop/GestureLock-master1/app/build/intermediates/res/merged/debug/menu/main.xml",
         "source": "/Users/Yiqing/Desktop/GestureLock-master1/app/src/main/res/menu/main.xml"
+    },
+    {
+        "merged": "/Users/weiweili/AndroidStudioProjects/HCI-Android-Unlocking/GestureLock/app/build/intermediates/res/merged/debug/menu/main.xml",
+        "source": "/Users/weiweili/AndroidStudioProjects/HCI-Android-Unlocking/GestureLock/app/src/main/res/menu/main.xml"
     }
 ]

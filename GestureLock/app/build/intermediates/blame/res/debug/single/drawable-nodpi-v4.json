@@ -1,5 +1,9 @@
 [
     {
+        "merged": "/Users/weiweili/AndroidStudioProjects/HCI-Android-Unlocking/GestureLock/app/build/intermediates/res/merged/debug/drawable-nodpi-v4/indicator_code_lock_drag_direction_green_up.png",
+        "source": "/Users/weiweili/AndroidStudioProjects/HCI-Android-Unlocking/GestureLock/app/src/main/res/drawable-nodpi/indicator_code_lock_drag_direction_green_up.png"
+    },
+    {
         "merged": "/Users/Yiqing/Desktop/GestureLock-master1/app/build/intermediates/res/merged/debug/drawable-nodpi-v4/indicator_code_lock_drag_direction_green_up.png",
         "source": "/Users/Yiqing/Desktop/GestureLock-master1/app/src/main/res/drawable-nodpi/indicator_code_lock_drag_direction_green_up.png"
     }

@@ -1,5 +1,9 @@
 [
     {
+        "merged": "/Users/weiweili/AndroidStudioProjects/HCI-Android-Unlocking/GestureLock/app/build/intermediates/res/merged/debug/layout/activity_main.xml",
+        "source": "/Users/weiweili/AndroidStudioProjects/HCI-Android-Unlocking/GestureLock/app/src/main/res/layout/activity_main.xml"
+    },
+    {
         "merged": "/Users/Yiqing/Desktop/GestureLock-master1/app/build/intermediates/res/merged/debug/layout/activity_lock_setup.xml",
         "source": "/Users/Yiqing/Desktop/GestureLock-master1/app/src/main/res/layout/activity_lock_setup.xml"
     },
@@ -8,7 +12,15 @@
         "source": "/Users/Yiqing/Desktop/GestureLock-master1/app/src/main/res/layout/activity_main.xml"
     },
     {
+        "merged": "/Users/weiweili/AndroidStudioProjects/HCI-Android-Unlocking/GestureLock/app/build/intermediates/res/merged/debug/layout/activity_lock.xml",
+        "source": "/Users/weiweili/AndroidStudioProjects/HCI-Android-Unlocking/GestureLock/app/src/main/res/layout/activity_lock.xml"
+    },
+    {
         "merged": "/Users/Yiqing/Desktop/GestureLock-master1/app/build/intermediates/res/merged/debug/layout/activity_lock.xml",
         "source": "/Users/Yiqing/Desktop/GestureLock-master1/app/src/main/res/layout/activity_lock.xml"
+    },
+    {
+        "merged": "/Users/weiweili/AndroidStudioProjects/HCI-Android-Unlocking/GestureLock/app/build/intermediates/res/merged/debug/layout/activity_lock_setup.xml",
+        "source": "/Users/weiweili/AndroidStudioProjects/HCI-Android-Unlocking/GestureLock/app/src/main/res/layout/activity_lock_setup.xml"
     }
 ]

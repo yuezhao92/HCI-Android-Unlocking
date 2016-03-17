@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">SherUnlock</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_display_message">Answer</string>
+    <string name="title_activity_lock_button">LockButton</string>
+    <string name="title_activity_lock_button_view">LockButtonView</string>
+</resources>
