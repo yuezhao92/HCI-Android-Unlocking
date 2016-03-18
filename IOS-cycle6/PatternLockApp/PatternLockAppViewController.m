@@ -8,10 +8,12 @@
 
 #import "PatternLockAppViewController.h"
 #import "DrawPatternLockViewController.h"
-
+extern NSString* fileName;
 extern int counter;
-extern NSArray *myArray;
-
+extern int currentIdx;
+extern int const maxAttempts;
+extern NSArray *patternDictionary;
+extern NSTimeInterval executionTime;
 @implementation PatternLockAppViewController
 
 - (void)didReceiveMemoryWarning
@@ -64,24 +66,73 @@ extern NSArray *myArray;
 
 - (void)lockEntered:(NSString*)key
 {
-    myArray = @[@"0102030609", @"0102030507",@"0102030507"];
-    NSLog(@"key: %@", key);
+    NSLog(@"user input: %@", key);
+    NSLog(@"key: %@", patternDictionary[currentIdx]);
     
-    if (![key isEqualToString:myArray[counter]]) {
-        //      [self dismissModalViewControllerAnimated:YES];
+    //真正的手机上该用的地址
+    NSString *filePath = [[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) firstObject] stringByAppendingPathComponent:fileName];
+    //    NSString *filePath = @"/Users/FredQiu/Desktop/HCI-Android-Unlocking/IOS-cycle6/PatternLockApp/File.txt";
+    // hardcoded
+    NSFileHandle *fileHandle = [NSFileHandle fileHandleForWritingAtPath:filePath];
+
+    NSLog(@"executionTime = %f", executionTime);
+    NSLog(@"file path = %@", filePath);
+    
+    if (![key isEqualToString:patternDictionary[currentIdx]])
+    {
+ //      [self dismissModalViewControllerAnimated:YES];
+//        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Error"
+//                                                            message:@"Wrong pattern!"
+//                                                           delegate:nil
+//                                                  cancelButtonTitle:nil
+//                                                  otherButtonTitles:@"OK", nil];
+//        [alertView show];
+        [self dismissModalViewControllerAnimated:YES];
+        counter = counter - 1;
         
-        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Error"
-                                                            message:@"Wrong pattern!"
-                                                           delegate:nil
-                                                  cancelButtonTitle:nil
-                                                  otherButtonTitles:@"OK", nil];
-        [alertView show];
-        counter = counter + 1;
+        //打算save的string，也就是execution time
+        NSString *stringToWrite = [NSString stringWithFormat: @"%i attempt executionTime = %f pattern matched = No\n", counter,executionTime];
+        
+        if (fileHandle)
+        {
+            [fileHandle seekToEndOfFile];
+            [fileHandle writeData:[stringToWrite dataUsingEncoding:NSUTF8StringEncoding]];
+            [fileHandle closeFile];
+        }
+        else
+        {
+            [stringToWrite writeToFile:filePath
+                            atomically:NO
+                              encoding:NSStringEncodingConversionAllowLossy
+                                 error:nil];
+        }
+        
+        if(counter <= 0)
+            exit(0); // exit the program
+
     }
     else
     {
         [self dismissModalViewControllerAnimated:YES];
-        counter = counter + 1;
+        counter = counter - 1;
+        
+        NSString *stringToWrite = [NSString stringWithFormat: @"%i attempt executionTime = %f pattern matched = True\n", (maxAttempts - counter),executionTime];
+        if (fileHandle)
+        {
+            [fileHandle seekToEndOfFile];
+            [fileHandle writeData:[stringToWrite dataUsingEncoding:NSUTF8StringEncoding]];
+            [fileHandle closeFile];
+        }
+        else
+        {
+            [stringToWrite writeToFile:filePath
+                            atomically:NO
+                              encoding:NSStringEncodingConversionAllowLossy
+                                 error:nil];
+        }
+        if(counter <= 0)
+            exit(0); // exit the program
+
     }
     
     

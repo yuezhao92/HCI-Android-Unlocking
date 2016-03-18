@@ -15,11 +15,11 @@
   id _target;
   SEL _action;
 }
-
+@property (weak,nonatomic) IBOutlet UILabel *textLabel;
 // get key from the pattern drawn
 - (NSString*)getKey;
-
+-(int)getRandomNumberBetween:(int)from to:(int)to;
 - (void)setTarget:(id)target withAction:(SEL)action;
-
+@property (weak,nonatomic) IBOutlet UILabel *textLabell;
 
 @end

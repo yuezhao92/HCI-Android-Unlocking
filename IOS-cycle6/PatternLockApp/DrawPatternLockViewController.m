@@ -8,10 +8,12 @@
 
 #import "DrawPatternLockViewController.h"
 #import "DrawPatternLockView.h"
-extern NSDate *methodStart;
-extern NSDate *methodFinish;
+extern NSDate *unlockStart;
+extern NSDate *unlockFinish;
+extern NSTimeInterval executionTime;
+extern NSArray *patternDictionary;
 extern int counter;
-
+extern int currentIdx;
 #define MATRIX_SIZE 3
 //#define TICK   NSDate *startTime = [NSDate date]
 //#define TOCK NSLog(@"%s Time: %f", __func__, -[startTime timeIntervalSinceNow])
@@ -33,22 +35,51 @@ extern int counter;
   self.view = [[DrawPatternLockView alloc] init];
 }
 
+// random number generator
+-(int)getRandomNumberBetween:(int)from to:(int)to {
+    
+    return (int)from + arc4random() % (to-from+1);
+}
 
 - (void)viewDidLoad
 {
   [super viewDidLoad];
-  
-  self.view.backgroundColor = [UIColor darkGrayColor];
-    
-    for(int i=0;i<6;i++){
-        UIImage *dotImage = [UIImage imageNamed:@"dot_off.png"];
+   self.view.backgroundColor = [UIColor whiteColor];
+   
+
+
+   for(int i=0;i<6;i++)
+   {
+        NSString *temp = [NSString stringWithFormat: @"%i.png", (1+i)];
+        UIImage *dotImage = [UIImage imageNamed:temp];
         UIImageView *imageView = [[UIImageView alloc] initWithImage:dotImage
                                                    highlightedImage:[UIImage imageNamed:@"dot_on.png"]];
-        imageView.frame = CGRectMake(0, 0, dotImage.size.width/2, dotImage.size.height/2);
+        imageView.frame = CGRectMake(0, 0, dotImage.size.width, dotImage.size.height);
         imageView.userInteractionEnabled = YES;
         imageView.tag = i+1;
         [self.view addSubview:imageView];
     }
+    
+    UITextField *textField = [[UITextField alloc] initWithFrame:CGRectMake(10, 100, 300, 40)];
+    textField.borderStyle = UITextBorderStyleRoundedRect;
+    textField.font = [UIFont systemFontOfSize:15];
+    textField.keyboardType = UIKeyboardTypeDefault;
+    textField.returnKeyType = UIReturnKeyDone;
+    textField.contentVerticalAlignment = UIControlContentVerticalAlignmentCenter;
+    textField.backgroundColor = [UIColor lightGrayColor];
+    textField.textColor = [UIColor blueColor];
+    textField.textAlignment = UITextAlignmentCenter;
+
+    currentIdx = [self getRandomNumberBetween:0 to: 19];
+    
+    NSString *tempStr = patternDictionary[currentIdx];
+    NSString *finalStr = [NSString stringWithFormat: @"Pattern<%@", tempStr];
+    finalStr = [finalStr stringByReplacingOccurrencesOfString:@"0" withString:@"-"];
+    textField.placeholder = finalStr;
+    textField.delegate = self;
+    
+    
+    [self.view addSubview:textField];
     
 
 //  for (int i=0; i<2; i++)
@@ -127,7 +158,7 @@ extern int counter;
 
 
 - (void) touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
-    methodStart = [NSDate date];
+    unlockStart = [NSDate date];
   _paths = [[NSMutableArray alloc] init];
 }
 
@@ -188,35 +219,15 @@ extern int counter;
     key = [NSMutableString string];
     
     // simple way to generate a key
-    for (NSNumber *tag in _paths) {
+    for (NSNumber *tag in _paths)
+    {
         [key appendFormat:@"%02d", tag.integerValue];
     }
-    methodFinish = [NSDate date];
-    NSTimeInterval executionTime = [methodFinish timeIntervalSinceDate:methodStart];
-    NSLog(@"executionTime = %f", executionTime);
     
-    //打算save的string，也就是execution time
-    NSString *stringToWrite = [NSString stringWithFormat: @"%i attempt executionTime = %f \n", counter,executionTime];
-    //真正的手机上该用的地址
-    //NSString *filePath = [[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) firstObject] stringByAppendingPathComponent:@"File.txt"];
-    NSString *filePath = @"/Users/FredQiu/Desktop/HCI-Android-Unlocking/IOS-cycle6/PatternLockApp/File.txt";
-    // hardcoded
-    //@"./Users/FredQiu/Desktop/HCI-Android-Unlocking/IOS/PatternLockApp/File.txt";
-    NSFileHandle *fileHandle = [NSFileHandle fileHandleForWritingAtPath:filePath];
-    if (fileHandle){
-        [fileHandle seekToEndOfFile];
-        [fileHandle writeData:[stringToWrite dataUsingEncoding:NSUTF8StringEncoding]];
-        [fileHandle closeFile];
-    }
-    else{
-        [stringToWrite writeToFile:filePath
-                        atomically:NO
-                          encoding:NSStringEncodingConversionAllowLossy
-                             error:nil];
-    }
-    
-    NSLog(@"file path = %@", filePath);
-    //[stringToWrite writeToFile:filePath atomically:NO encoding:NSUTF8StringEncoding error:&error];
+    // save the execution time
+    unlockFinish = [NSDate date];
+    executionTime = [unlockFinish timeIntervalSinceDate:unlockStart];
+
     return key;
 }
 
