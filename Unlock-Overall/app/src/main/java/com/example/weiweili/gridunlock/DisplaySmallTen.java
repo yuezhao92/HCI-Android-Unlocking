@@ -31,7 +31,7 @@ public class DisplaySmallTen extends AppCompatActivity {
 
     public void next(View view){
 
-        Intent intent = new Intent(this, MyActivity.class);
+        Intent intent = new Intent(this, SmallSix.class);
         startActivity(intent);
 
     }

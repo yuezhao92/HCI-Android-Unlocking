@@ -31,6 +31,7 @@ public class DisplayMessageActivity extends AppCompatActivity {
         String message = intent.getStringExtra(MyActivity.EXTRA_MESSAGE);
         TextView textView = new TextView(this);
         textView.setTextSize(10);
+//        textView.set
         textView.setText(message);
 
         RelativeLayout layout = (RelativeLayout) findViewById(R.id.content);
