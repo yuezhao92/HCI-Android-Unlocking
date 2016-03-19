@@ -30,7 +30,7 @@
             android:id="@+id/button2"
             android:onClick="sendMessage"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="120.5dp"
+            android:layout_marginTop="106dp"
             android:background="@drawable/roundbutton"/>
 
         <Button
@@ -59,7 +59,7 @@
             android:text="5"
             android:id="@+id/button5"
             android:onClick="sendMessage"
-            android:layout_marginTop="161.5dp"
+            android:layout_marginTop="154dp"
             android:layout_centerHorizontal="true"
             android:background="@drawable/roundbutton"/>
 
@@ -80,7 +80,7 @@
             android:text="7"
             android:id="@+id/button7"
             android:onClick="sendMessage"
-            android:layout_marginLeft="102dp"
+            android:layout_marginLeft="95dp"
             android:layout_alignBottom="@+id/button8"
             android:background="@drawable/roundbutton"/>
 
@@ -92,7 +92,7 @@
             android:onClick="sendMessage"
             android:layout_centerHorizontal="true"
             android:background="@drawable/roundbutton"
-            android:layout_marginTop="202.5dp" />
+            android:layout_marginTop="202dp" />
 
         <Button
             android:layout_width="36dp"
@@ -101,7 +101,7 @@
             android:id="@+id/button9"
             android:onClick="sendMessage"
             android:background="@drawable/roundbutton"
-            android:layout_marginLeft="184dp"
+            android:layout_marginLeft="191dp"
             android:layout_alignBottom="@+id/button8" />
 
         <Button
@@ -110,17 +110,18 @@
             android:text="0"
             android:id="@+id/button0"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="243.5dp"
+            android:layout_marginTop="254dp"
             android:background="@drawable/roundbutton"
             android:onClick="sendMessage" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="@dimen/activity_vertical_margin"
             android:id="@+id/inputInstruct"
-            android:text="Enter password"/>
+            android:text="Enter password"
+            android:layout_below="@+id/display"
+            android:layout_centerHorizontal="true"
+            android:clickable="true" />
 
         <TextView
             android:layout_width="80dp"
@@ -130,13 +131,14 @@
             android:id="@+id/display" />
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="@dimen/display_margin"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
             android:id="@+id/number"
             android:textSize="10dp"
-            android:text="****"/>
+            android:text="****"
+            android:layout_above="@+id/button3"
+            android:layout_alignLeft="@+id/button2"
+            android:layout_alignStart="@+id/button2" />
 
         <Button
             android:layout_width="80dp"
