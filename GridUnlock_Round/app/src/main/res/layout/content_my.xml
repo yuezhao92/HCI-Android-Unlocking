@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:showIn="@layout/activity_my">
+    <AbsoluteLayout
+        android:layout_width="match_parent"
+        android:layout_height="474dp">
+
+        <Button
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:text="4"
+            android:id="@+id/button4"
+            android:background="@drawable/round_button"
+            android:textColor="#808080"
+            android:onClick="sendMessage"
+            android:layout_below="@+id/display"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="91dp"
+            android:layout_x="68dp"
+            android:layout_y="239.2dp" />
+
+        <Button
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:text="5"
+            android:id="@+id/button5"
+            android:textColor="#808080"
+            android:background="@drawable/round_button"
+            android:onClick="sendMessage"
+            android:layout_x="68dp"
+            android:layout_y="159.6dp" />
+
+
+        <TextView
+            android:id="@+id/display"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_row="1"
+            android:layout_column="4"
+            android:ellipsize="marquee"
+            android:fadingEdge="horizontal"
+            android:singleLine="true"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#FF999999"
+            android:textIsSelectable="false"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:layout_x="250dp"
+            android:layout_y="50dp" />
+
+        <Button
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:text="3"
+            android:background="@drawable/round_button"
+            android:id="@+id/button3"
+            android:textColor="#808080"
+            android:onClick="sendMessage"
+            android:layout_gravity="right|center_vertical"
+            android:layout_x="137.6dp"
+            android:layout_y="288.8dp" />
+
+        <Button
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:text="2"
+            android:id="@+id/button2"
+            android:background="@drawable/round_button"
+            android:textColor="#808080"
+            android:onClick="sendMessage"
+            android:layout_gravity="right|top"
+            android:layout_x="207.2dp"
+            android:layout_y="239.2dp" />
+
+        <Button
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:text="1"
+            android:id="@+id/button1"
+            android:background="@drawable/round_button"
+            android:textColor="#808080"
+            android:onClick="sendMessage"
+            android:layout_gravity="center_horizontal|top"
+            android:layout_x="207.2dp"
+            android:layout_y="159.6dp" />
+
+        <Button
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:text="0"
+            android:id="@+id/button0"
+            android:background="@drawable/round_button"
+            android:textColor="#808080"
+            android:onClick="sendMessage"
+            android:layout_gravity="center"
+            android:layout_below="@+id/button4"
+            android:layout_centerHorizontal="true"
+            android:layout_x="137.6dp"
+            android:layout_y="100dp" />
+
+    </AbsoluteLayout>
+
+
+</LinearLayout>
