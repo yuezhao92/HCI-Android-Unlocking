@@ -123,7 +123,7 @@
             android:layout_below="@+id/button0"
             android:layout_centerHorizontal="true"
             android:layout_x="124dp"
-            android:layout_y="350dp" />
+            android:layout_y="320dp" />
 
         <Button
             android:layout_width="80dp"
@@ -135,7 +135,7 @@
             android:layout_toEndOf="@+id/button9"
             android:onClick="skip"
             android:layout_x="232dp"
-            android:layout_y="350dp" />
+            android:layout_y="320dp" />
 
         <Button
             android:layout_width="80dp"
@@ -147,7 +147,7 @@
             android:layout_toStartOf="@+id/button4"
             android:onClick="test"
             android:layout_x="9dp"
-            android:layout_y="350dp" />
+            android:layout_y="320dp" />
 
     </AbsoluteLayout>
 
