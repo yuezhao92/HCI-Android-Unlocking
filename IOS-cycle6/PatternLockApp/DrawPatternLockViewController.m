@@ -44,7 +44,7 @@ extern int counter;
         UIImage *dotImage = [UIImage imageNamed:@"dot_off.png"];
         UIImageView *imageView = [[UIImageView alloc] initWithImage:dotImage
                                                    highlightedImage:[UIImage imageNamed:@"dot_on.png"]];
-        imageView.frame = CGRectMake(0, 0, dotImage.size.width/2, dotImage.size.height/2);
+        imageView.frame = CGRectMake(0, 0, dotImage.size.width, dotImage.size.height);
         imageView.userInteractionEnabled = YES;
         imageView.tag = i+1;
         [self.view addSubview:imageView];
@@ -86,26 +86,37 @@ extern int counter;
 //      int y = h*(i%MATRIX_SIZE) + h/2;
         if(i==0){
             view.center = CGPointMake(shortSide+x, 0+y);
+            NSLog(@"this is button %i and the coordinate is %d and %d", i+1, shortSide, 0);
             i++;
         }
         else if(i==1){
             view.center = CGPointMake(radius+shortSide+x, 0+y);
+            NSLog(@"this is button %i and the coordinate is %d and %d", i+1, radius+shortSide, 0);
+
             i++;
         }
         else if(i==2){
             view.center = CGPointMake(0+x, longSide+y);
+            NSLog(@"this is button %i and the coordinate is %d and %d", i+1, 0, longSide);
+
             i++;
         }
         else if(i==3){
             view.center = CGPointMake(diameter+x, longSide+y);
+            NSLog(@"this is button %i and the coordinate is %d and %d", i+1, diameter, longSide);
+
             i++;
         }
         else if(i==4){
             view.center = CGPointMake(shortSide+x, 2*longSide+y);
+            NSLog(@"this is button %i and the coordinate is %d and %d", i+1, shortSide, 2*longSide);
+
             i++;
         }
         else if(i==5){
             view.center = CGPointMake(radius+shortSide+x, 2*longSide+y);
+            NSLog(@"this is button %i and the coordinate is %d and %d", i+1, radius+shortSide, 2*longSide);
+
             i++;
         }
         else
