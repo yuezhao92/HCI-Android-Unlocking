@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:showIn="@layout/activity_small_ten">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:text="1"
+            android:id="@+id/button1"
+            android:onClick="sendMessage"
+            android:layout_alignBottom="@+id/button2"
+            android:layout_above="@+id/button4"
+            android:layout_alignRight="@+id/button4"
+            android:background="@drawable/roundbutton"/>
+
+        <Button
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:text="2"
+            android:id="@+id/button2"
+            android:onClick="sendMessage"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="120.5dp"
+            android:background="@drawable/roundbutton"/>
+
+        <Button
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:text="3"
+            android:id="@+id/button3"
+            android:onClick="sendMessage"
+            android:layout_alignBottom="@+id/button2"
+            android:layout_alignRight="@+id/button6"
+            android:background="@drawable/roundbutton"/>
+
+        <Button
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:text="4"
+            android:id="@+id/button4"
+            android:onClick="sendMessage"
+            android:layout_alignBottom="@+id/button5"
+            android:layout_alignLeft="@+id/button7"
+            android:background="@drawable/roundbutton"/>
+
+        <Button
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:text="5"
+            android:id="@+id/button5"
+            android:onClick="sendMessage"
+            android:layout_marginTop="161.5dp"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/roundbutton"/>
+
+        <Button
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:text="6"
+            android:id="@+id/button6"
+            android:onClick="sendMessage"
+            android:layout_above="@+id/button9"
+            android:layout_alignRight="@+id/button9"
+            android:layout_alignBottom="@+id/button5"
+            android:background="@drawable/roundbutton"/>
+
+        <Button
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:text="7"
+            android:id="@+id/button7"
+            android:onClick="sendMessage"
+            android:layout_marginLeft="102dp"
+            android:layout_alignBottom="@+id/button8"
+            android:background="@drawable/roundbutton"/>
+
+        <Button
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:text="8"
+            android:id="@+id/button8"
+            android:onClick="sendMessage"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/roundbutton"
+            android:layout_marginTop="202.5dp" />
+
+        <Button
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:text="9"
+            android:id="@+id/button9"
+            android:onClick="sendMessage"
+            android:background="@drawable/roundbutton"
+            android:layout_marginLeft="184dp"
+            android:layout_alignBottom="@+id/button8" />
+
+        <Button
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:text="0"
+            android:id="@+id/button0"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="243.5dp"
+            android:background="@drawable/roundbutton"
+            android:onClick="sendMessage" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:id="@+id/inputInstruct"
+            android:text="Enter password"/>
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:id="@+id/display" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/display_margin"
+            android:id="@+id/number"
+            android:textSize="10dp"
+            android:text="****"/>
+
+        <Button
+            android:layout_width="80dp"
+            android:layout_height="50dp"
+            android:text="Begin"
+            android:id="@+id/begin"
+            android:layout_marginTop="43dp"
+            android:onClick="begin"
+            android:layout_below="@+id/button0"
+            android:layout_centerHorizontal="true" />
+
+        <Button
+            android:layout_width="80dp"
+            android:layout_height="50dp"
+            android:text="SKIP"
+            android:id="@+id/skip"
+            android:layout_alignTop="@+id/begin"
+            android:layout_toRightOf="@+id/button9"
+            android:layout_toEndOf="@+id/button9"
+            android:onClick="skip"/>
+
+        <Button
+            android:layout_width="80dp"
+            android:layout_height="50dp"
+            android:text="TEST"
+            android:id="@+id/test"
+            android:layout_alignTop="@+id/begin"
+            android:layout_toLeftOf="@+id/button4"
+            android:layout_toStartOf="@+id/button4"
+            android:onClick="test"/>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/edit_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

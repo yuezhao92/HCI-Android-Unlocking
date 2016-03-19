@@ -86,6 +86,19 @@ extern NSArray *myArray;
 }
 
 
+//- (NSArray) generateRandom:(int)n
+//{
+//    NSArray *ret;
+//    for(int i=0;i<n;i++){
+//        NSString *str = [[NSString alloc] init];
+//        for(int j=0;j<6;j++){
+//            str = @"0"+arc4random_uniform(10);
+//        }
+//        NSArray[i]=*str;
+//    }
+//    return NSArray;
+//}
+
 - (IBAction)lockClicked:(id)sender {
   DrawPatternLockViewController *lockVC = [[DrawPatternLockViewController alloc] init];
      //NSDate *methodStart = [NSDate date];

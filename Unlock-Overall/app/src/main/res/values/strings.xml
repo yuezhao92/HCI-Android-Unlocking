@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">SherUnlock</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_display_message">Answer</string>
+    <string name="title_activity_lock_button">LockButton</string>
+    <string name="title_activity_lock_button_view">LockButtonView</string>
+    <string name="title_activity_welcome">Welcome</string>
+    <string name="title_activity_big_six">Six Button Circle in 42mm</string>
+    <string name="title_activity_display_big_six">Answer</string>
+    <string name="title_activity_small_ten">Grid Layout 38mm</string>
+    <string name="title_activity_display_small_ten">Answer</string>
+    <string name="title_activity_small_six">Six Button Circle 38mm</string>
+    <string name="title_activity_display_small_six">Answer</string>
+</resources>

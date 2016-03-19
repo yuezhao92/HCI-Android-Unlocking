@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.weiweili.gridunlock">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".MyActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".DisplayMessageActivity"
+            android:label="@string/title_activity_display_message"
+            android:parentActivityName=".MyActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.weiweili.gridunlock.MyActivity" />
+        </activity>
+        <activity
+            android:name=".LockButton"
+            android:label="@string/title_activity_lock_button"
+            android:parentActivityName=".MyActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.weiweili.gridunlock.MyActivity" />
+        </activity>
+        <activity
+            android:name=".LockButtonView"
+            android:label="@string/title_activity_lock_button_view"
+            android:parentActivityName=".MyActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.weiweili.gridunlock.MyActivity" />
+        </activity>
+        <activity
+            android:name=".BigSix"
+            android:label="@string/title_activity_big_six"
+            android:parentActivityName=".DisplayMessageActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".DisplayBigSix"
+            android:label="@string/title_activity_display_big_six"
+            android:parentActivityName=".BigSix"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".SmallTen"
+            android:label="@string/title_activity_small_ten"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".DisplaySmallTen"
+            android:label="@string/title_activity_display_small_ten"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".SmallSix"
+            android:label="@string/title_activity_small_six"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".DisplaySmallSix"
+            android:label="@string/title_activity_display_small_six"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+    </application>
+
+</manifest>

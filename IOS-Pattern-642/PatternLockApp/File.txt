@@ -1,0 +1,4 @@
+0 attempt executionTime = 0.005729 
+1 attempt executionTime = 0.005938 
+2 attempt executionTime = 0.006053 
+3 attempt executionTime = 0.006537 
