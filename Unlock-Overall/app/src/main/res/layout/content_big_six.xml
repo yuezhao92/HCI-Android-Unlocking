@@ -12,27 +12,29 @@
         android:layout_height="474dp">
 
         <Button
-            android:layout_width="36dp"
-            android:layout_height="36dp"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
             android:text="4"
+            android:textSize="16dp"
+            android:textColor="#FFFFFF"
             android:id="@+id/button4"
-            android:textColor="#808080"
             android:onClick="sendMessage"
             android:layout_below="@+id/display"
-            android:layout_x="101.75dp"
-            android:layout_y="263.25dp"
-            android:background="@drawable/roundbutton"/>
+            android:layout_x="89.75dp"
+            android:layout_y="251.25dp"
+            android:background="@drawable/roundbutton6" />
 
         <Button
-            android:layout_width="36dp"
-            android:layout_height="36dp"
-            android:text="5"
-            android:id="@+id/button5"
-            android:textColor="#808080"
-            android:background="@drawable/roundbutton"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:text="3"
+            android:textSize="16dp"
+            android:id="@+id/button3"
+            android:textColor="#FFFFFF"
+            android:background="@drawable/roundbutton6"
             android:onClick="sendMessage"
-            android:layout_x="187.25dp"
-            android:layout_y="263.25dp" />
+            android:layout_x="175.25dp"
+            android:layout_y="251.25dp" />
 
 
         <TextView
@@ -53,54 +55,58 @@
             android:layout_y="36dp" />
 
         <Button
-            android:layout_width="36dp"
-            android:layout_height="36dp"
-            android:text="3"
-            android:background="@drawable/roundbutton"
-            android:id="@+id/button3"
-            android:textColor="#808080"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:text="2"
+            android:textSize="16dp"
+            android:background="@drawable/roundbutton6"
+            android:id="@+id/button2"
+            android:textColor="#FFFFFF"
             android:onClick="sendMessage"
             android:layout_gravity="right|center_vertical"
-            android:layout_x="230.5dp"
-            android:layout_y="194dp" />
+            android:layout_x="218.5dp"
+            android:layout_y="182dp" />
 
         <Button
-            android:layout_width="36dp"
-            android:layout_height="36dp"
-            android:text="2"
-            android:id="@+id/button2"
-            android:background="@drawable/roundbutton"
-            android:textColor="#808080"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:text="5"
+            android:textSize="16dp"
+            android:textColor="#FFFFFF"
+            android:id="@+id/button5"
+            android:background="@drawable/roundbutton6"
             android:onClick="sendMessage"
             android:layout_gravity="right|top"
-            android:layout_x="59.5dp"
-            android:layout_y="194dp" />
+            android:layout_x="47.5dp"
+            android:layout_y="182dp" />
 
         <Button
-            android:layout_width="36dp"
-            android:layout_height="36dp"
-            android:text="1"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
             android:id="@+id/button1"
-            android:background="@drawable/roundbutton"
-            android:textColor="#808080"
+            android:text="1"
+            android:textSize="16dp"
+            android:textColor="#FFFFFF"
             android:onClick="sendMessage"
             android:layout_gravity="center_horizontal|top"
-            android:layout_x="187.25dp"
-            android:layout_y="124.75dp" />
+            android:layout_x="175.25dp"
+            android:layout_y="112.75dp"
+            android:background="@drawable/roundbutton6"/>
 
         <Button
-            android:layout_width="36dp"
-            android:layout_height="36dp"
-            android:text="0"
-            android:id="@+id/button0"
-            android:background="@drawable/roundbutton"
-            android:textColor="#808080"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:text="6"
+            android:textSize="16dp"
+            android:id="@+id/button6"
+            android:background="@drawable/roundbutton6"
+            android:textColor="#FFFFFF"
             android:onClick="sendMessage"
             android:layout_gravity="center"
             android:layout_below="@+id/button4"
             android:layout_centerHorizontal="true"
-            android:layout_x="101.75dp"
-            android:layout_y="124.75dp" />
+            android:layout_x="89.75dp"
+            android:layout_y="112.75dp" />
 
 
         <TextView
