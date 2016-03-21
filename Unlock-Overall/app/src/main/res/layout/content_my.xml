@@ -151,14 +151,13 @@
             android:id="@+id/display" />
 
         <TextView
-            android:layout_width="30dp"
-            android:layout_height="30dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:id="@+id/number"
             android:textSize="10dp"
             android:text="****"
-            android:layout_below="@+id/inputInstruct"
-            android:layout_alignRight="@+id/button2"
-            android:layout_alignEnd="@+id/button2" />
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/inputInstruct" />
 
         <Button
             android:layout_width="80dp"

@@ -107,7 +107,7 @@ public class MyActivity extends AppCompatActivity {
         time1 = new Date();
         System.out.println(time1);
         count=0;
-        answer = generateAnswerString(11);
+        answer = generateAnswerString(21);
         prinf(answer);
         TextView tmp = (TextView) findViewById(R.id.display);
         tmp.setText("round "+count+"");
@@ -180,7 +180,7 @@ public class MyActivity extends AppCompatActivity {
             }
 
 
-            if(count==10 && flagTest==false){
+            if(count==20 && flagTest==false){
                 Intent intent = new Intent(this, DisplayMessageActivity.class);
                 intent.putExtra(EXTRA_MESSAGE, acc.toString());
                 startActivity(intent);

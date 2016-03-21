@@ -103,7 +103,7 @@ public class SmallSix extends AppCompatActivity {
         tv.setText(answer[count]);
 
         db = openOrCreateDatabase("test.db", Context.MODE_PRIVATE, null);
-        db.execSQL("DROP TABLE IF EXISTS Output");
+        db.execSQL("DROP TABLE IF EXISTS Output4");
         db.execSQL("CREATE TABLE Output4 (id INTEGER PRIMARY KEY AUTOINCREMENT, random_num VARCHAR, enter_num VARCHAR, mistake INTEGER, time FLOAT)");
     }
 
@@ -112,7 +112,7 @@ public class SmallSix extends AppCompatActivity {
         time1 = new Date();
         System.out.println(time1);
         count=0;
-        answer = generateAnswerString(11);
+        answer = generateAnswerString(21);
         prinf(answer);
         TextView tmp = (TextView) findViewById(R.id.display);
         tmp.setText("round "+count+"");
@@ -185,7 +185,7 @@ public class SmallSix extends AppCompatActivity {
             }
 
 
-            if(count==10 && flagTest==false){
+            if(count==20 && flagTest==false){
                 Intent intent = new Intent(this, DisplaySmallSix.class);
                 intent.putExtra(EXTRA_MESSAGE, acc.toString());
                 startActivity(intent);
