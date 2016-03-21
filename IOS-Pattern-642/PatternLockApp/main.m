@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "PatternLockAppAppDelegate.h"
 
-int const maxAttempts = 10; //max time of repetition
+int const maxAttempts = 20; //max time of repetition
 int counter = maxAttempts; //
 int currentIdx = 1; // current pattern used
 NSArray  *patternDictionary = nil;
@@ -33,26 +33,27 @@ int main(int argc, char *argv[])
     //输出currentDateString
     NSLog(@"%@",fileName);
     patternDictionary =
-                @[@"010205",
+                @[@"0102050403",
                   @"010204",
                   @"01020406",
-                  @"010305",
+                  @"01030502",
                   @"010506",
-                  @"0102",
-                  @"030406",
-                  @"020506",
+                  @"010203040506",
+                  @"0304060102",
+                  @"0205060104",
                   @"020304",
-                  @"010403",
+                  @"0104030502",
                   @"02060301",
                   @"01020506",
                   @"02030406",
-                  @"040103",
-                  @"040605",
-                  @"020106",
+                  @"0401030502",
+                  @"0406050201",
+                  @"020106040305",
                   @"040205",
                   @"02010304",
-                  @"040601",
+                  @"0406010305",
                   @"02010503"];
+    
     @autoreleasepool {
         return UIApplicationMain(argc, argv, nil, NSStringFromClass([PatternLockAppAppDelegate class]));
     }

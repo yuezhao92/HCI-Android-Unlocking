@@ -74,12 +74,20 @@ extern int currentIdx;
     
     NSString *tempStr = patternDictionary[currentIdx];
     NSString *finalStr = [NSString stringWithFormat: @"Pattern<%@", tempStr];
+    finalStr = [finalStr stringByReplacingOccurrencesOfString:@"6" withString:@"f"];
+    finalStr = [finalStr stringByReplacingOccurrencesOfString:@"4" withString:@"h"];
+    finalStr = [finalStr stringByReplacingOccurrencesOfString:@"3" withString:@"s"];
     finalStr = [finalStr stringByReplacingOccurrencesOfString:@"0" withString:@"-"];
+    
+    finalStr = [finalStr stringByReplacingOccurrencesOfString:@"f" withString:@"4"];
+    finalStr = [finalStr stringByReplacingOccurrencesOfString:@"h" withString:@"3"];
+    finalStr = [finalStr stringByReplacingOccurrencesOfString:@"s" withString:@"6"];
     textField.placeholder = finalStr;
     textField.delegate = self;
     
     
     [self.view addSubview:textField];
+
     
 
 //  for (int i=0; i<2; i++)

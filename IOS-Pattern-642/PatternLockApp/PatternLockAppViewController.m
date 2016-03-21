@@ -78,6 +78,7 @@ extern NSTimeInterval executionTime;
     NSLog(@"executionTime = %f", executionTime);
     NSLog(@"file path = %@", filePath);
     
+    
     if (![key isEqualToString:patternDictionary[currentIdx]])
     {
  //      [self dismissModalViewControllerAnimated:YES];
