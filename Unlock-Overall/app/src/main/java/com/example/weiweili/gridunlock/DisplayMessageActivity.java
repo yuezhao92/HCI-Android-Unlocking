@@ -10,6 +10,10 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import java.io.FileOutputStream;
+import java.sql.Timestamp;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 public class DisplayMessageActivity extends AppCompatActivity {
 
@@ -42,7 +46,10 @@ public class DisplayMessageActivity extends AppCompatActivity {
 
         String filename = "myfile";
         String string = message;
-        string = "------Ci-dessous est le résultat de BigTen------\n"+string+"-------Ci-dessus est la suite de BigTen-------\n";
+//        DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
+//        Date date = new Date();
+        String ts = "-------------"+new Timestamp(System.currentTimeMillis())+"-------------\n";
+        string = ts+"------Ci-dessous est le résultat de BigTen------\n"+string+"-------Ci-dessus est la suite de BigTen-------\n";
         FileOutputStream outputStream;
 
         try {
