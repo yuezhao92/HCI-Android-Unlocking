@@ -1,5 +1,6 @@
 package com.example.weiweili.gridunlock;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -7,6 +8,8 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+
+import java.io.FileOutputStream;
 
 public class DisplayMessageActivity extends AppCompatActivity {
 
@@ -36,6 +39,21 @@ public class DisplayMessageActivity extends AppCompatActivity {
 
         RelativeLayout layout = (RelativeLayout) findViewById(R.id.content);
         layout.addView(textView);
+
+        String filename = "myfile";
+        String string = message;
+        string = "------Ci-dessous est le résultat de BigTen------\n"+string+"-------Ci-dessus est la suite de BigTen-------\n";
+        FileOutputStream outputStream;
+
+        try {
+            outputStream = openFileOutput(filename, Context.MODE_APPEND);
+            outputStream.write(string.getBytes());
+            outputStream.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+
 
         //打开或创建test.db数据库
 //        SQLiteDatabase db = openOrCreateDatabase("test.db", Context.MODE_PRIVATE, null);

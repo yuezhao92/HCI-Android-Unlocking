@@ -116,8 +116,12 @@
             android:layout_y="90dp"
             android:layout_x="150dp"
             android:id="@+id/number"
+<<<<<<< HEAD
+            android:text="****"/>
+=======
             android:text="1234"
             android:textSize="10dp"/>
+>>>>>>> b101a579ce9af5346869a015b80090a3b54b7a56
 
 
         <Button

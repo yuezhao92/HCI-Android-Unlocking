@@ -103,7 +103,7 @@ public class BigSix extends AppCompatActivity {
 
         db = openOrCreateDatabase("test.db", Context.MODE_PRIVATE, null);
         db.execSQL("DROP TABLE IF EXISTS Output2");
-        db.execSQL("CREATE TABLE Output2 (id INTEGER PRIMARY KEY AUTOINCREMENT, random_num VARCHAR, enter_num VARCHAR, mistake INTEGER, time FLOAT)");
+        db.execSQL("CREATE TABLE Output2 (id INTEGER PRIMARY KEY AUTOINCREMENT, random_num VARCHAR, enter_num VARCHAR, mistake INTEGER, time FLOAT, test Integer)");
     }
 
     public void begin(View view){
@@ -120,7 +120,7 @@ public class BigSix extends AppCompatActivity {
 
         db = openOrCreateDatabase("test.db", Context.MODE_PRIVATE, null);
         db.execSQL("DROP TABLE IF EXISTS Output2");
-        db.execSQL("CREATE TABLE Output2 (id INTEGER PRIMARY KEY AUTOINCREMENT, random_num VARCHAR, enter_num VARCHAR, mistake INTEGER, time FLOAT)");
+        db.execSQL("CREATE TABLE Output2 (id INTEGER PRIMARY KEY AUTOINCREMENT, random_num VARCHAR, enter_num VARCHAR, mistake INTEGER, time FLOAT, test Integer)");
     }
 
 
@@ -145,6 +145,14 @@ public class BigSix extends AppCompatActivity {
             ContentValues cv = new ContentValues();
             cv.put("random_num", answer[count]);
             cv.put("enter_num", four.toString());
+            if(flagTest==false){
+                cv.put("test",0);
+                acc.append("|begin|");
+            }
+            else{
+                cv.put("test",1);
+                acc.append("|test|");
+            }
             cv.put("time", (time2.getTime() - time1.getTime()) / 1000.0);
             acc.append("|"+(time2.getTime() - time1.getTime()) / 1000.0+"|");
             System.out.println((time2.getTime() - time1.getTime()) / 1000.0);
@@ -156,9 +164,9 @@ public class BigSix extends AppCompatActivity {
                 //1 represents true
                 cv.put("mistake", 1);
                 db.insert("Output2", null, cv);
-
+                acc.append(answer[count]);
                 System.out.println("correct");
-                acc.append(" correct ");
+                acc.append(" correct \n");
                 rec.setLength(0);
                 count++;
                 TextView tmp = (TextView) findViewById(R.id.display);
@@ -171,9 +179,9 @@ public class BigSix extends AppCompatActivity {
                 //0 represents false
                 cv.put("mistake", 0);
                 db.insert("Output2", null, cv);
-
+                acc.append(answer[count]);
                 System.out.println("incorrect");
-                acc.append(" incorrect ");
+                acc.append(" incorrect \n");
                 count++;
                 rec.setLength(0);
                 TextView tmp = (TextView) findViewById(R.id.display);
