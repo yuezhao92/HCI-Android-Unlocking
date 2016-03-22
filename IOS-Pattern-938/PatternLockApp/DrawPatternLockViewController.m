@@ -54,7 +54,7 @@ extern int currentIdx;
             UIImage *dotImage = [UIImage imageNamed:temp];
             
             UIImageView *imageView = [[UIImageView alloc] initWithImage:dotImage
-                                                       highlightedImage:[UIImage imageNamed:@"dot_on.png"]];
+                                                       highlightedImage:[UIImage imageNamed:@"dot_on1.png"]];
             imageView.frame = CGRectMake(60, 60, dotImage.size.width, dotImage.size.height);
             imageView.userInteractionEnabled = YES;
             imageView.tag = j*MATRIX_SIZE + i + 1;
