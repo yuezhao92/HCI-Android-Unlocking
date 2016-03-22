@@ -39,15 +39,10 @@
 
         <TextView
             android:id="@+id/display"
-<<<<<<< HEAD
             android:layout_width="80dp"
             android:layout_height="40dp"
             android:layout_row="1"
             android:layout_column="4"
-=======
-            android:layout_width="100dp"
-            android:layout_height="36dp"
->>>>>>> b101a579ce9af5346869a015b80090a3b54b7a56
             android:ellipsize="marquee"
             android:fadingEdge="horizontal"
             android:singleLine="true"
@@ -56,13 +51,9 @@
             android:textIsSelectable="false"
             android:textSize="12sp"
             android:textStyle="bold"
-<<<<<<< HEAD
             android:layout_x="119dp"
             android:layout_y="18dp" />
-=======
-            android:layout_x="112dp"
-            android:layout_y="36dp" />
->>>>>>> b101a579ce9af5346869a015b80090a3b54b7a56
+
 
         <Button
             android:layout_width="60dp"
@@ -125,12 +116,8 @@
             android:layout_y="90dp"
             android:layout_x="150dp"
             android:id="@+id/number"
-<<<<<<< HEAD
             android:text="****"/>
-=======
-            android:text="1234"
-            android:textSize="10dp"/>
->>>>>>> b101a579ce9af5346869a015b80090a3b54b7a56
+
 
         <Button
             android:layout_width="80dp"

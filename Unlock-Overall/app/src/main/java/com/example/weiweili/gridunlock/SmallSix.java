@@ -104,11 +104,7 @@ public class SmallSix extends AppCompatActivity {
 
         db = openOrCreateDatabase("test.db", Context.MODE_PRIVATE, null);
         db.execSQL("DROP TABLE IF EXISTS Output4");
-<<<<<<< HEAD
         db.execSQL("CREATE TABLE Output4 (id INTEGER PRIMARY KEY AUTOINCREMENT, random_num VARCHAR, enter_num VARCHAR, mistake INTEGER, time FLOAT, test Integer)");
-=======
-        db.execSQL("CREATE TABLE Output4 (id INTEGER PRIMARY KEY AUTOINCREMENT, random_num VARCHAR, enter_num VARCHAR, mistake INTEGER, time FLOAT)");
->>>>>>> b101a579ce9af5346869a015b80090a3b54b7a56
     }
 
     public void begin(View view){
