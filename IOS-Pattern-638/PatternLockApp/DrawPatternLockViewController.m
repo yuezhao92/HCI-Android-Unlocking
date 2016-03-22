@@ -53,7 +53,7 @@ extern int currentIdx;
         NSString *temp = [NSString stringWithFormat: @"%i.png", (1+i)];
         UIImage *dotImage = [UIImage imageNamed:temp];
         UIImageView *imageView = [[UIImageView alloc] initWithImage:dotImage
-                                                   highlightedImage:[UIImage imageNamed:@"dot_on.png"]];
+                                                   highlightedImage:[UIImage imageNamed:@"dot_on1.png"]];
         imageView.frame = CGRectMake(0, 0, dotImage.size.width, dotImage.size.height);
         imageView.userInteractionEnabled = YES;
         imageView.tag = i+1;
