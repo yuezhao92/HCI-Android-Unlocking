@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "PatternLockAppAppDelegate.h"
 
-int const maxAttempts = 10; //max time of repetition
+int const maxAttempts = 15; //max time of repetition
 int counter = maxAttempts; //
 int currentIdx = 1; // current pattern used
 NSArray  *patternDictionary = nil;

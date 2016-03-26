@@ -54,7 +54,7 @@ extern int currentIdx;
         UIImage *dotImage = [UIImage imageNamed:temp];
         UIImageView *imageView = [[UIImageView alloc] initWithImage:dotImage
                                                    highlightedImage:[UIImage imageNamed:@"dot_on1.png"]];
-        imageView.frame = CGRectMake(0, 0, dotImage.size.width, dotImage.size.height);
+        imageView.frame = CGRectMake(0, 0, dotImage.size.width/1.3, dotImage.size.height/1.3);
         imageView.userInteractionEnabled = YES;
         imageView.tag = i+1;
         [self.view addSubview:imageView];
@@ -73,15 +73,23 @@ extern int currentIdx;
     currentIdx = [self getRandomNumberBetween:0 to: 19];
     
     NSString *tempStr = patternDictionary[currentIdx];
+    
     NSString *finalStr = [NSString stringWithFormat: @"Pattern<%@", tempStr];
-    finalStr = [finalStr stringByReplacingOccurrencesOfString:@"6" withString:@"f"];
-    finalStr = [finalStr stringByReplacingOccurrencesOfString:@"4" withString:@"h"];
-    finalStr = [finalStr stringByReplacingOccurrencesOfString:@"3" withString:@"s"];
     finalStr = [finalStr stringByReplacingOccurrencesOfString:@"0" withString:@"-"];
     
-    finalStr = [finalStr stringByReplacingOccurrencesOfString:@"f" withString:@"4"];
-    finalStr = [finalStr stringByReplacingOccurrencesOfString:@"h" withString:@"3"];
-    finalStr = [finalStr stringByReplacingOccurrencesOfString:@"s" withString:@"6"];
+    finalStr = [finalStr stringByReplacingOccurrencesOfString:@"1" withString:@"f"];
+    finalStr = [finalStr stringByReplacingOccurrencesOfString:@"2" withString:@"h"];
+    finalStr = [finalStr stringByReplacingOccurrencesOfString:@"3" withString:@"s"];
+    finalStr = [finalStr stringByReplacingOccurrencesOfString:@"4" withString:@"b"];
+    finalStr = [finalStr stringByReplacingOccurrencesOfString:@"5" withString:@"c"];
+    finalStr = [finalStr stringByReplacingOccurrencesOfString:@"6" withString:@"d"];
+    
+    finalStr = [finalStr stringByReplacingOccurrencesOfString:@"f" withString:@"6"];
+    finalStr = [finalStr stringByReplacingOccurrencesOfString:@"h" withString:@"1"];
+    finalStr = [finalStr stringByReplacingOccurrencesOfString:@"s" withString:@"5"];
+    finalStr = [finalStr stringByReplacingOccurrencesOfString:@"b" withString:@"2"];
+    finalStr = [finalStr stringByReplacingOccurrencesOfString:@"c" withString:@"4"];
+    finalStr = [finalStr stringByReplacingOccurrencesOfString:@"d" withString:@"3"];
     textField.placeholder = finalStr;
     textField.delegate = self;
     
