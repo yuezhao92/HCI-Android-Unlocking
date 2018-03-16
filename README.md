@@ -3,4 +3,4 @@ HCI Project: understanding the unlocking methods for smartwatches. In this repos
 
 One paper is published under this project:
 
-Zhao, Y., Qiu, Z., Yang, Y., Li, W. and Fan, M., 2017, September. An empirical study of touch-based authentication methods on smartwatches. In *Proceedings of the 2017 ACM International Symposium on Wearable Computers*. ACM.
+**Y. Zhao**, Z. Qiu, Y. Yang, W. Li, M. Fan, "An Empirical Study of Touch-based Authentication Methods on Smartwatches," *ACM International Symposium on Wearable Computers (ISWC)*, 2017.
